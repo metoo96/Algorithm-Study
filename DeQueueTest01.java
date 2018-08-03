@@ -1,4 +1,4 @@
-package com.zhuguozhu.util;
+﻿package com.zhuguozhu.util;
 
 /**
  * 双端队列简单实现(基于数组)
