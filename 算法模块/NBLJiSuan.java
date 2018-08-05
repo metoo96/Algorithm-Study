@@ -3,7 +3,7 @@ package p19;
 import java.util.Stack;
 
 /**
- * 逆波兰表达式求值
+ * 简单逆波兰表达式求解
  * @author Guozhu Zhu
  * @date 2018/8/5
  * @version 1.0
