@@ -20,7 +20,7 @@ public class TwoSum {
 		}
 	}
 	
-	//两端夹逼方式求解
+	//两端夹逼方式求解:
 	public static int[] twoSum(int[] numbers, int target) {
 		if (numbers.length < 2) {
 			return null;
