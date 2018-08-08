@@ -38,8 +38,8 @@ public class Test03<E> {
 		for (int index = iStart; index <= iEnd; index++) {
 			if (inOrder[index] == preOrder[pStart]) {
 				//重点是左右长度的计算：
-				//左子树的长度为index-iStart 
-				//右子树的长度为iEnd-index
+				//左子树的长度为: index-iStart 
+				//右子树的长度为: iEnd-index
 				root.left = reConstruct(preOrder, pStart+1, pStart+index-iStart, inOrder, iStart, index-1);
 			    root.right = reConstruct(preOrder, pStart+index-iStart+1, pEnd, inOrder, index+1, iEnd);
 			}
