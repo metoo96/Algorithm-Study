@@ -14,12 +14,13 @@ public class TreeNode {
 }
 */
 /**
-* 之字型打印字符串
+* 按之字型打印二叉树
 * @author Guozhu Zhu
 * @date 2018/8/10
 * @version 1.0
 */
 public class Solution {
+    
     public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
         ArrayList<ArrayList<Integer>> resList = new ArrayList<ArrayList<Integer>>();
         LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
