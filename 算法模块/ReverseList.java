@@ -7,9 +7,15 @@ public class ListNode {
         this.val = val;
     }
 }*/
+/*
+* 翻转链表
+* @author Guozhu Zhu
+* @date 2018/8/10
+* @version 1.0
+*/
 public class Solution {
+    
     public ListNode ReverseList(ListNode head) {
-
     ListNode pre = null;
     ListNode next = null;
     while (head != null) {
@@ -20,4 +26,5 @@ public class Solution {
     }
     return pre;
     }
+    
 }
