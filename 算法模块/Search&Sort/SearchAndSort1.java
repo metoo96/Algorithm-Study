@@ -14,12 +14,12 @@ public class Test04 {
 	public static void main(String[] args) {
 		int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 		Arrays.sort(arr);
-		System.out.println(search01(arr, 4));
-		//Sort01(arr); //冒泡排序called
-		//Sort02(arr); //简单插入排序called
-		//Sort03(arr); //选择排序called
-		//Sort04(arr);   //二分插入排序called
-		//Sort05(arr, 0, arr.length-1);
+		System.out.println(search01(arr, 4)); //二分查找算法
+		//Sort01(arr);                        //冒泡排序called
+		//Sort02(arr);                        //简单插入排序called
+		//Sort03(arr);                        //选择排序called
+		//Sort04(arr);                        //二分插入排序called
+		//Sort05(arr, 0, arr.length-1);       //快速排序called
 		for (int i : arr) {
 			System.out.println("value:" + i);
 		}
@@ -69,7 +69,7 @@ public class Test04 {
 		}
 	}
 	
-	//二分插入排序
+	//二分插入排序 最差O(n)=n^2 ,当待排序的数组有序时O(n)=nlogn
 	public static void Sort04(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i];
@@ -131,7 +131,6 @@ public class Test04 {
 			}
 		}
 		return -1;
-	}
-	
+	}	
 
 }
