@@ -17,7 +17,7 @@ public class Test03 {
 	
 	public static int solution1(int[] arr) {
 		int ans = arr[0];
-		int sum = arr[0];
+		int sum = arr[0];  //当前子数组
 		for (int i = 1; i < arr.length; i++) {
 			sum = Integer.max(arr[i]+sum, arr[i]);
 			if (sum > ans) {
