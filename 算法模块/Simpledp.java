@@ -3,7 +3,7 @@ package p25;
 import java.util.HashMap;
 
 /**
- * 爬楼梯简单问题, 一次可爬1和2阶
+ * 爬楼梯简单问题, 一次可爬1 or 2 阶楼梯
  * @author Guozhu Zhu
  * @date 2018/8/11
  * @version 1.0
@@ -18,6 +18,7 @@ public class Test02 {
 		solution3(10);
 	}
 	
+	//1. 递归求解
 	public static int solution1(int n) {
 		if (n <= 0) {
 			return 0;
@@ -31,6 +32,7 @@ public class Test02 {
 		return solution1(n-1) + solution1(n-2);
 	} 
 	
+	//2. 递归 + 备忘录
 	public static int solution2(int n, HashMap<Integer, Integer> map) {
 		if (n <= 0) {
 			return 0;
@@ -50,6 +52,7 @@ public class Test02 {
 		}
 	}
 	
+        //3. 简单动态规划
 	public static int solution3(int n) {
 		if (n <= 0) {
 			return 0;
