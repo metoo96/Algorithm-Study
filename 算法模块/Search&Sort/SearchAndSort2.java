@@ -24,7 +24,7 @@ public class Test01 {
 	    }	    
 	}
 	
-	//1. 冒泡排序， 属于交换排序的一种， 是稳定的排序， O(n)= n^2
+	//1. 冒泡排序， 属于交换排序的一种，是稳定的排序，O(n)= n^2
 	public static void Sort01(int[] arr) {
 		for (int i = 0; i < arr.length-1; i++) {
 			for (int j = 0; j < arr.length-1-i; j++) {
@@ -38,7 +38,7 @@ public class Test01 {
 		}
 	}
 	
-	//2. 选择排序，是不稳定的排序， O(n)=n^2
+	//2. 选择排序，是不稳定的排序，O(n)=n^2
 	public static void Sort02(int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i+1; j < arr.length; j++) {
@@ -52,7 +52,7 @@ public class Test01 {
 		}
 	}
 	
-	//3. 插入排序， 是稳定的排序， O(n)=n^2
+	//3. 插入排序，是稳定的排序，O(n)=n^2
 	public static void Sort03(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i]; //待插入的元素
@@ -65,7 +65,7 @@ public class Test01 {
 		}
 	}
 	
-	//4. 二分插入排序， 是稳定的排序 
+	//4. 二分插入排序，是稳定的排序 
 	public static void Sort04(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i]; //待插入元素
@@ -88,7 +88,7 @@ public class Test01 {
 		}
 	}
 	
-	//5. 快速排序, 不稳定排序， O(n)=nlogn
+	//5. 快速排序, 不稳定排序，O(n)=nlogn
 	public static void Sort05(int[] arr, int left, int right) {
 		if (left >= right) {
 			return;
@@ -111,7 +111,7 @@ public class Test01 {
 		Sort05(arr, i+1, right);
 	}
 	
-	//6. 二分查找算法非递归
+	//6.  二分查找算法非递归
 	public static int search01(int[] arr, int target) {
 		int low = 0;
 		int high = arr.length;
