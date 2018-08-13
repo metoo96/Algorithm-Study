@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class Test04 {
 	
 	//充当备忘录
-	public static HashMap<Integer, Integer> cache =new  HashMap<Integer, Integer>();
+	public static HashMap<Integer, Integer> cache = new  HashMap<Integer, Integer>();
 	
 	public static void main(String[] args) {
 		System.out.println(Solution01(10));
@@ -31,7 +31,7 @@ public class Test04 {
 		if (n == 2) {
 			return 2;
 		}
-		return Solution02(n-1)+Solution02(n-2);
+		return Solution02(n-1) + Solution02(n-2);
 	}
 
 	//2. 递归+备忘录算法
