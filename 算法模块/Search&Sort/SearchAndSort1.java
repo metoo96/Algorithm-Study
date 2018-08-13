@@ -3,7 +3,7 @@ package p25;
 import java.util.Arrays;
 
 /**
- * 排序算法和查找算法实现#
+ * 排序算法和查找算法实现#Day1
  * @author Guozhu Zhu
  * @date 2018/8/12
  * @version 1.0
