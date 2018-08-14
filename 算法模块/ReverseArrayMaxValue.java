@@ -15,7 +15,8 @@ public class Test09 {
 		int res = MaxNumber(arr);
 		System.out.println(res);
 	}
-
+        
+	//针对不同情况选择二分或顺序查找
 	private static int MaxNumber(int[] arr) {
 		if (arr == null || arr.length <= 0) {
 			return -1;
@@ -29,6 +30,7 @@ public class Test09 {
 				break;
 			}
 			mid = (low+high) / 2;
+			//顺序查找
 			if (arr[mid] == arr[low] && arr[mid] == arr[high]) {
 				return seqSearch(arr, low, high);
 			}
@@ -50,5 +52,5 @@ public class Test09 {
 		}
 		return max;
 	}
-
+	
 }
