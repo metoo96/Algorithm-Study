@@ -78,10 +78,10 @@ public class Test02 {
 					low = mid+1;
 				}
 			}
-			for (int j = i-1; j >= low; j--) {
+			for (int j = i-1; j >= high+1; j--) {
 				arr[j+1] = arr[j];
 			}
-			arr[low] = temp;
+			arr[high+1] = temp;
 		}
 	}
 	
