@@ -108,7 +108,7 @@ public class Test02 {
 		Sort05(arr, i+1, right);
 	}
 	
-	//6. 二分插入排序算法实现非递归实现
+	//6. 二分查找算法实现非递归实现
 	public static int search01(int[] arr, int key) {
 		int low = 0;
 		int high = arr.length-1;
@@ -126,7 +126,7 @@ public class Test02 {
 		return -1;
 	}
 	
-	//7. 二分插入排序算法实递归实现
+	//7. 二分查找算法实递归实现
 	public static int search02(int[] arr, int key, int low, int high) {
 		if (low >= high) {
 			return -1;
