@@ -8,7 +8,6 @@ import java.util.List;
  * @author Guozhu Zhu
  * @date 2018/8/16
  * @version 1.0
- *
  */
 public class Test03 {
 	
@@ -29,7 +28,7 @@ public class Test03 {
         if (left > right) {
         	return;
         }
-        System.out.println("left:" + left + "right" + right);
+        System.out.println("left:" + left + "right:" + right);
         if (left == 0 && right == 0) {
             list.add(st);
         }
