@@ -103,7 +103,7 @@ public class Test04 {
 	}
 	
 	/**
-	 * 5.快速排序算法实现
+	 * 5.快速排序算法实现 
 	 * @param arr    待排序数组
 	 * @param left   左指针
 	 * @param right  右指针
@@ -174,6 +174,5 @@ public class Test04 {
 			return mid;
 		}
 	}
-	
 
 }
