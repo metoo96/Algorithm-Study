@@ -12,8 +12,8 @@ import java.util.PriorityQueue;
 public class Test01 {
 	
 	public static void main(String[] args) {
-		PriorityQueue<Integer> queue = new PriorityQueue<>(); //默认是小顶堆的实现
-		int[] arr = new int[] {1, 2, 4, 3, 6, 5, 7, 8, 9};    //数组
+		PriorityQueue<Integer> queue = new PriorityQueue<>();  //默认是小顶堆的实现
+		int[] arr = new int[] {1, 2, 4, 3, 6, 5, 7, 8, 9};     //数组
 		for (int i = 0; i < arr.length; i++) {
 			queue.add(arr[i]);
 		}
