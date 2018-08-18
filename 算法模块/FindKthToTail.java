@@ -13,7 +13,7 @@ public class Solution {
         }
         ListNode fast = head;
         ListNode slow = head;
-        //先走k步
+        //先走k-1步
         int i = 0;
         while (i < k-1) {
             if (fast.next == null) {
