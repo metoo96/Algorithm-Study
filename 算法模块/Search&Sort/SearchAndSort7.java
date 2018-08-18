@@ -14,7 +14,7 @@ public class Test03 {
 		//Sort01(arr);                //1.冒泡排序算法实现
 		//Sort02(arr);                //2.选择排序算法实现
 		//Sort03(arr);                //3.直接插入排序算法实现
-		Sort04(arr);
+		//Sort04(arr);                //4.二分插入排序算法实现
 		for (int i : arr) {
 			System.out.println(i);
 		}
