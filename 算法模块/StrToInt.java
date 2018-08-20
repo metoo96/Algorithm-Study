@@ -10,7 +10,7 @@ package p30;
 public class Test02 {
 	
 	public static void main(String[] args) {
-		String str = "-123456";
+		String str = "-1234567";
 	    int res = StrToInt(str);
 	    System.out.println(res); 
 	}
