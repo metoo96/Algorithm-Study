@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * 滑动窗口最大值 / 最小值 ------心累+头痛~~~~
+ * 滑动窗口最大值 / 最小值 
  * [注意]注意关注循环的起始点、 利用双端队列可尾部+头部移除元素
  * @author Guozhu Zhu
  * @date 2018/8/12
