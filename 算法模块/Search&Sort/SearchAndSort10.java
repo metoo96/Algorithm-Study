@@ -1,7 +1,7 @@
 package p31;
 
 /**
- * 查找和排序算法实现#Day10
+ * 查找和排序算法#Day10
  * @author Guozhu Zhu
  * @date 2018/8/22
  * @version 1.0
