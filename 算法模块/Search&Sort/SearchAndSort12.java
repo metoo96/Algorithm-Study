@@ -12,7 +12,7 @@ public class Test04 {
 	public static void main(String[] args) {
 		int[] arr = {1, 3, 5, 4, 7, 8, 9, 10, 11, 32};
 		//Sort01(arr);            //1.冒泡排序
-		Sort02(arr);              //2.选择排序
+		//Sort02(arr);              //2.选择排序
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
