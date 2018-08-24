@@ -10,13 +10,13 @@ package p32;
 public class Test09 {
 	
 	public static void main(String[] args) {
-		System.out.println(numSum(1110));
+		System.out.println(numSum(11110));
 	}
 	
 	public static int numSum(int number) {
 		int sum = 0;
 		while (number > 0) {
-			sum += number % 10;
+			sum += number%10;
 			number /= 10;
 		}
 		return sum;
