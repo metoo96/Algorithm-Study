@@ -17,7 +17,7 @@ public class Test03 {
 	    }
 	}
 	
-	//算法过程
+	//快慢双指针法
 	public static int delete(int[] arr) {
 		int i = 0;
 		for (int j = 1; j < arr.length; j++) {
