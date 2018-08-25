@@ -7,6 +7,13 @@ public class ListNode {
         this.val = val;
     }
 }*/
+/**
+* 两链表的第一共同节点
+* @author Guozhu Zhu
+* @date 2018/8/26
+* @version 1.0
+*
+*/
 public class Solution {
     
     public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
