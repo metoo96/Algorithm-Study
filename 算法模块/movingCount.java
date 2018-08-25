@@ -3,7 +3,7 @@ package p33;
 /**
  * 机器人的运动范围
  * @author Guozhu Zhu
- * @date 2018/8/25
+ * @date 2018/8/26
  * @version 1.0
  *
  */
@@ -47,7 +47,7 @@ public class Test01 {
 			return 0;
 		}
 		visitFlag[i][j] = true;
-		return 1+movingCountCore(i+1, j, rows, cols, threshold, visitFlag) +
+		return         1+movingCountCore(i+1, j, rows, cols, threshold, visitFlag) +
 				 movingCountCore(i-1, j, rows, cols, threshold, visitFlag) +
 				 movingCountCore(i, j+1, rows, cols, threshold, visitFlag) +
 				 movingCountCore(i, j-1, rows, cols, threshold, visitFlag);
