@@ -1,7 +1,6 @@
 package p33;
 
 /**
- *
  * 希尔排序算法实现(缩小增量排序)
  * @author Guozhu Zhu
  * @date 2018/8/29
@@ -19,7 +18,7 @@ public class Test04 {
 		}
 	}
 	
-	// 希尔排序算法， 不稳定的排序， O(n)=n^1.3
+	// 希尔排序算法， 不稳定的排序， O(n)= nlogn~n^2; 最快O(n)=n^1.3
 	public static void Sort01(int[] arr) {
 		int gap = arr.length / 2;
 		while (gap >= 1) {
