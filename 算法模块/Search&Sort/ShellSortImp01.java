@@ -18,7 +18,7 @@ public class Test04 {
 		}
 	}
 	
-	//希尔排序算法， 不稳定的排序， O(n)=nlogn;
+	// 希尔排序算法， 不稳定的排序， O(n)=nlogn;
 	public static void Sort01(int[] arr) {
 		int gap = arr.length / 2;
 		while (gap >= 1) {
