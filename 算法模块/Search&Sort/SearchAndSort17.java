@@ -1,7 +1,7 @@
 package p33;
 
 /**
- * 查找和排序算法实现
+ * 查找和排序算法实现(新增希尔排序和归并排序)
  * @author Guozhu Zhu
  * @date 2018/8/30
  * @version 1.0
