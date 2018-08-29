@@ -45,9 +45,9 @@ public class Test03 {
 	public void mergesort(int a[], int first, int last, int temp[]) {
 		if (first < last) {
 			int mid = (first + last) / 2;
-			mergesort(a, first, mid, temp);        //左边有序
-			mergesort(a, mid + 1, last, temp);     //右边有序
-			mergearray(a, first, mid, last, temp); //再将二个有序数列合并
+			mergesort(a, first, mid, temp);         //左边有序
+			mergesort(a, mid + 1, last, temp);      //右边有序
+			mergearray(a, first, mid, last, temp);  //再将二个有序数列合并
 		}
 	}
 	 
