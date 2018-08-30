@@ -3,7 +3,7 @@ package p33;
 import java.util.Scanner;
 
 /**
- * 贪婪算法-解决找零钱问题
+ * 贪婪算法示例--解决找零钱问题；
  * @author Guozhu Zhu
  * @date 2018/8/30
  * @version 1.0
