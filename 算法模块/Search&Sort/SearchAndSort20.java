@@ -164,7 +164,7 @@ public class Test01 {
 		return -1;
 	}
 	
-	//9  二分查找算法实现， O(n)=logn;
+	//9  二分查找算法实现，O(n)=logn;
 	public static int Search02(int[] arr, int target) {
 		int low = 0;
 		int high = arr.length-1;
@@ -182,7 +182,7 @@ public class Test01 {
 		return -1;
 	}
 	
-	//10 二分查找算法实现， O(n)=logn;
+	//10 二分查找算法实现，O(n)=logn;
 	public static int Search03(int[] arr, int target, int low, int high) {
 		if (low > high) {
 			return -1;
