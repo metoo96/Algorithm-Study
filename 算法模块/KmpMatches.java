@@ -1,7 +1,7 @@
 package p35;
 
 /**
- * kmp模式匹配算法实现
+ * KMP模式匹配算法实现
  * @author Guozhu Zhu
  * @date 2018/9/6
  * @version 1.0
@@ -41,7 +41,7 @@ public class Test06 {
 		return -1;
  	}
 	
-	//获取模式串的数组, 优化版
+	//获取模式串的数组, 优化版(主要解决之前的类似abba这种对称性的优化策略)
 	public static int[] getNext(char[] T) {
 		int[] next = new int[T.length];
 		next[0] = -1;
@@ -60,8 +60,7 @@ public class Test06 {
 				k = next[j];
 			}
 		}
-		return next;
-		
+		return next;	
 	}
 
 }
