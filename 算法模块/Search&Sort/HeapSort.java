@@ -14,9 +14,11 @@ public class HeapSort{
   
   public static void Sort01(int[] arr) {
     int len = arr.length;
+    //构建大顶堆，从最后一个非根节点开始
     for (int i = Math.floor(len/2); i >= 0; i--) {
       downAdjust(arr, i, arr.length-1);
     }
+    //下沉(相当于删除, 但删除元素放到数组最后
     for (int i = arr.length-1; i > 0; i--) {
       swap(arr, 0, i);
       downAdjust(arr, 0, i-1);
