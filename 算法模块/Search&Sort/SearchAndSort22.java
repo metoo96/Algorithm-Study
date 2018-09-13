@@ -1,7 +1,7 @@
 package p38;
 
 /**
- * 查找和排序算法实现(八大排序算法)
+ * 查找和排序算法实现+八大排序算法
  * @author Guozhu Zhu
  * @date 2018/9/13
  * @version 1.0
