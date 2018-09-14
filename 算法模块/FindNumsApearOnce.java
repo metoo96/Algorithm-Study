@@ -5,15 +5,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-  数组中只出现一次的数字, 保存到num1[0]和num2[0]中;
+ /** 数组中只出现一次的数字, 保存到num1[0]和num2[0]中;
   @author Guozhu Zhu
   @date 2018915
   @version 1.0
- 
+ */
  
 public class FindNumsAppearOnce {
 	
-	 ========== Test ========== 
+	/* ========== Test ========== */
 	public static void main(String[] args) {
 		int[] num1 = new int[10];
 		int[] num2 = new int[10];
