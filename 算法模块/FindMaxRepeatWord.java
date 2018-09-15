@@ -1,4 +1,10 @@
-
+/**
+* 前k个高频单词
+* @Guozhu Zhu
+* @date 2018/9/15
+* @version  1.0
+*
+*/
 class Solution {
     
     public List<String> topKFrequent(String[] words, int k) {
