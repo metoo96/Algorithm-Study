@@ -20,16 +20,16 @@ public class Test04 {
 	/* ========== Test ========== */
 	public static void main(String[] args) {
 		int[] arr = {1, 1, 1, 2, 2, 3, 3, 3};
-		List<Integer> list = solution(arr, 2);
+		List<Integer> list = Solution(arr, 2);
 		for (int i : list) {
 			System.out.println(i);
 		}
 	}
 	
-	public static ArrayList<Integer> solution(int[] nums, int k){
+	public static ArrayList<Integer> Solution(int[] nums, int k){
         ArrayList<Integer> resList = new ArrayList<Integer>();
 		//大顶堆
-		PriorityQueue<Map.Entry<Integer, Integer>> queue = new PriorityQueue<>(new Comparator<Map.Entry<Integer, Integer>>(){
+		PriorityQueue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>(new Comparator<Map.Entry<Integer, Integer>>(){
 			@Override
 			public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
 				// TODO Auto-generated method stub
@@ -46,10 +46,10 @@ public class Test04 {
 		}
 		Set<Map.Entry<Integer, Integer>> set = map.entrySet();
 		for (Map.Entry<Integer, Integer> j : set) {
-			queue.offer(j);
+			maxHeap.offer(j);
 		}
 		for (int i = 0; i < k; i++) {
-			resList.add(queue.poll().getKey());
+			resList.add(maxHeap.poll().getKey());
 		}
 		return resList;
 	}
