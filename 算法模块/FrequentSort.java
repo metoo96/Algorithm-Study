@@ -1,4 +1,6 @@
 class Solution {
+    
+    //按字符出现频率数排序输出
     public String frequencySort(String s) {
         char[] ch = s.toCharArray();
         PriorityQueue<Map.Entry<Character, Integer>> queue = new PriorityQueue<Map.Entry<Character, Integer>>(new Comparator<Map.Entry<Character, Integer>>(){
