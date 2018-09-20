@@ -1,4 +1,11 @@
+/*
+* @author Guozhu Zhu
+* @date 2018/9/20
+* @version 1.0
+*
+*/
 class Solution {
+    
     public int removeDuplicates(int[] nums) {
         int repeat = 2;
         if(nums.length <= repeat)
@@ -9,17 +16,16 @@ class Solution {
             if(nums[i] != nums[len2-1]) {
                 cnt = 1;
                 nums[len2++] = nums[i];
-            }
-            else{
+            } else {
                 cnt++;
-                if(cnt>repeat){
+                if (cnt > repeat) {
                     continue;
-                }
-                else{
-                    nums[len2++]=nums[i];
+                } else {
+                    nums[len2++]  = nums[i];
                 }
             }
         }
         return len2;
     }
+    
 }
