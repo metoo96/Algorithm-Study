@@ -209,7 +209,7 @@ public class Test12 {
 			temp[k++] = arr[j++];
 		}
 		for (int a = 0; a < k; a++) {
-			arr[a+first] = arr[a];
+			arr[a+first] = temp[a];
 		}
 	}
 
