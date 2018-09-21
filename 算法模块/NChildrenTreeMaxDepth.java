@@ -12,7 +12,14 @@ class Node {
     }
 };
 */
+/**
+* @autor Guozhu Zhu
+* @date 2018
+* @version 1.0
+*
+*/
 class Solution {
+    
     public int maxDepth(Node root) {
         if (root == null) {
             return 0;
@@ -23,4 +30,5 @@ class Solution {
         }
         return res;
     }
+    
 }
