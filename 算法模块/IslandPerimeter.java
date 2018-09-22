@@ -1,4 +1,12 @@
+/**
+* 岛屿的周长
+* @author Guozhu Zhu
+* @date 2018/9/22
+* @version 1.0
+*
+*/
 class Solution {
+    
     public int islandPerimeter(int[][] grid) {
         if (grid == null || grid.length == 0) {
             return 0;
@@ -25,4 +33,5 @@ class Solution {
         }
         return res;
     }
+    
 }
