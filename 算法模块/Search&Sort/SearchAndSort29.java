@@ -1,7 +1,7 @@
 package p41;
 
 /**
- * 排序和查找算法实现
+ * 排序和查找算法实现(每日敲一敲，熟练实现思想)
  * @author Guozhu Zhu
  * @date 2018/9/23
  * @version 1.0
