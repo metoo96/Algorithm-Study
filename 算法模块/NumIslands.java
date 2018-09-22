@@ -1,3 +1,10 @@
+/**
+* 岛屿的个数算法实现
+* @author Guozhu Zhu
+* @date 2018/9/22
+* @version 1.0
+*
+*/
 class Solution {
     
     public int numIslands(char[][] grid) {
@@ -18,11 +25,10 @@ class Solution {
             return ;
         }
         grid[i][j] = 2;
-        IslandsCore(i+1,j, grid);
+        IslandsCore(i+1, j, grid);
         IslandsCore(i-1, j, grid);
         IslandsCore(i, j-1, grid);
         IslandsCore(i, j+1, grid);
-        
     }
     
 }
