@@ -1,3 +1,10 @@
+/**
+* 暴力求解两个数组的交集(即不用HashSet的算法)
+* @author Guozhu Zhu
+* @date 2018/9/23
+* @version 1.0
+*
+*/
 class Solution {
     
     public int[] intersection(int[] nums1, int[] nums2) {
