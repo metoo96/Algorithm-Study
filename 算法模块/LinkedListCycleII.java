@@ -9,7 +9,14 @@
  *     }
  * }
  */
+/**
+* 链表的入环节点
+* @author Guozhu Zhu
+* @date 2018/9/24
+* @version 1.0
+*/
 public class Solution {
+    
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
             return null;
@@ -19,6 +26,7 @@ public class Solution {
         while (p2 != null && p2.next != null) {
             p2 = p2.next.next;
             p1 = p1.next;
+            //当p1 == p2 时， 即存在环；
             if (p1 == p2) {
                 p2 = head;
                 while (p1 != p2){
@@ -30,4 +38,5 @@ public class Solution {
         }
         return null;
     }
+    
 }
