@@ -1,3 +1,10 @@
+/**
+* 优先级队列的实现
+* @author Guozhu Zhu
+* @date 2018/9/25
+* @version 1.0
+*
+*/
 public class PriorityQueue{
     
     private int[] array;
@@ -74,6 +81,7 @@ public class PriorityQueue{
       this.array[parentIndex] = temp;
     }
     
+    /* ========== Test ========== */
     public static void main(String[] args) {
         PriorityQueue queue = new PriorityQueue();
             queue.offer(1);
