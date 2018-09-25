@@ -6,6 +6,12 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+/**
+* @Guozhu Zhu
+* @date 2018/9/25
+* @version 1.0
+*
+*/
 class Solution {
     
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
