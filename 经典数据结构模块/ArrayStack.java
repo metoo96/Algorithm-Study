@@ -4,7 +4,7 @@ package com.zhuguozhu.util2;
  * 基于数组的栈实现
  * @author Guozhu Zhu
  * @date 2018/9/22
- * @version 1.0
+ * @version 
  *
  */
 public class ArrayStack<E> implements Stack<E>{
