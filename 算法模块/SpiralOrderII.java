@@ -1,3 +1,10 @@
+/**
+* 螺旋矩阵
+* @author Guozhu Zhu
+* @date 2018/9/27
+* @version 1.0 
+*
+*/
 class Solution {
     
     public int[][] generateMatrix(int n) {
