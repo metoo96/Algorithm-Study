@@ -1,4 +1,12 @@
+/**
+* 螺旋矩阵
+* @author Guozhu Zhu
+* @date 2018/9/27
+* @version 1.0
+*
+*/
 class Solution {
+    
     public List<Integer> spiralOrder(int[][] matrix) {
         ArrayList<Integer> resList = new ArrayList<Integer>();
         if (matrix == null || matrix.length == 0) {
@@ -34,4 +42,5 @@ class Solution {
         }
         return resList;
     }
+    
 }
