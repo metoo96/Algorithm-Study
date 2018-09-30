@@ -7,6 +7,13 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* 二叉树的层次遍历，从下到上；
+* @author Guozhu Zhu
+* @date 2018/9/30
+* @version 1.0
+*
+*/
 class Solution {
     
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -38,7 +45,8 @@ class Solution {
                 list = new ArrayList<Integer>();
             }
         }
-        Collections.reverse(resList);
+        Collections.reverse(resList);    //反转元素
         return resList;
     }
+    
 }
