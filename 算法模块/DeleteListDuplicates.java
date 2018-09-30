@@ -6,7 +6,15 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+/**
+* 删除链表的重复元素
+* @author Guozhu Zhu
+* @date 2018/9/30
+* @version 1.0
+*
+*/
 class Solution {
+    
     public ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
         while (current != null && current.next != null) {
@@ -18,4 +26,5 @@ class Solution {
         }
         return head;
     }
+    
 }
