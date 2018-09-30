@@ -7,6 +7,13 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* 二叉树的每层的最大值
+* @author Guozhu Zhu
+* @date 2018/9/30
+* @version 1.0
+*
+*/
 class Solution {
     
     public List<Integer> largestValues(TreeNode root) {
