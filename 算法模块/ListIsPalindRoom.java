@@ -9,10 +9,16 @@ public class ListNode {
         this.val = val;
     }
 }*/
+/**
+* 判断是否为回文链表(快慢指针+栈)
+* @author Guozhu Zhu
+* @date 2018/10/3
+* @version 1.0
+*
+*/
 public class Palindrome {
     
     public boolean isPalindrome(ListNode pHead) {
-        // write code here
         ListNode fast = pHead;
         ListNode slow = pHead;
         Stack<Integer> stack = new Stack<Integer>();
@@ -21,7 +27,7 @@ public class Palindrome {
             fast = fast.next.next;
             slow = slow.next;
         }
-        //如果是奇数个节点，就跳过中间节点
+        //如果是链表是奇数个节点，就跳过中间节点的比较
         if (fast != null) {
             slow = slow.next;
         }
