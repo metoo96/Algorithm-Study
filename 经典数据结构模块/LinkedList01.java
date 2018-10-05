@@ -1,5 +1,12 @@
 package com.zhuguozhu.util3;
 
+/**
+* 双向链表的实现
+* @author Guozhu Zhu
+* @date 2018/10/5
+* @version 1.0
+*
+*/
 public class LinkedList01<E> {
 	
 	public int size = 0;
@@ -10,6 +17,7 @@ public class LinkedList01<E> {
 	
 	public Node<E> last;
 	
+	//节点的定义
 	public static class Node<E> {
 		E item;
 		Node<E> next;
@@ -24,8 +32,7 @@ public class LinkedList01<E> {
 		}
 	}
 	
-	public LinkedList01() {
-		
+	public LinkedList01() {	
 	}
 	
 	//node --> index
@@ -222,9 +229,9 @@ public class LinkedList01<E> {
         for (Node<E> x = first; x != null; x = x.next)
             result[i++] = x.item;
         return result;
-    }
+        }
 	
-	public E remove(int index) {
+   public E remove(int index) {
         if(checkElementIndex(index)) {
         return unlink(node(index));
         } else {
