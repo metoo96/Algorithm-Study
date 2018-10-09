@@ -1,7 +1,7 @@
 package com.zhuguozhu.util3;
 
 /**
- * 
+ * 顺序结构的队列实现
  * @author Guozhu Zhu
  * @date 2018/10/09
  * @version 1.0
