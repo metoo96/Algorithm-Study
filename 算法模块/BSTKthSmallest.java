@@ -7,6 +7,12 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* BST的第k个小的元素
+* @author Guozhu Zhu
+* @date 2018/10/09
+* @version 1.0
+*/
 class Solution {
 
     public int kthSmallest(TreeNode pRoot, int k) {
