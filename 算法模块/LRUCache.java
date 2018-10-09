@@ -1,10 +1,15 @@
+/**
+* LRUCache
+* @author Guozhu Zhu
+* @date 2018/10/09
+* @version 1.0
+*/
 class LRUCache{
     
-  
     public LinkedHashMap<Integer, Integer> lruCache;
     
     public LRUCache(int capacity) {
-        lruCache = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true){
+        lruCache = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
               protected boolean removeEldestEntry(Map.Entry<Integer,Integer> eldest) {
                  return size() > capacity;
               }
