@@ -9,6 +9,11 @@ public class TreeNode {
         this.val = val;
     }
 }*/
+/**
+* @author Guozhu Zhu
+* @date 2018/10/10
+* @version 1.0
+*/
 public class Checker {
     
     public boolean checkBST(TreeNode root) {
