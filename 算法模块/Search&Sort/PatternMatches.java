@@ -3,7 +3,7 @@ package p43;
 /**
  * kmp模式匹配算法实现
  * @author Guozhu Zhu
- * @date 2018/10/15
+ * @date 2018/10/17
  * @version 1.0
  *
  */
@@ -18,7 +18,7 @@ public class Test06 {
 		System.out.println(ans);
 	}
 	
-	//减少了朴素模式匹配算法的回溯操作
+	//减少了朴素模式匹配算法的回溯操作, Time:O(n)=n;
 	public static int Kmp(String S, String T, int[] next) {
 		char[] sArr = S.toCharArray();
 		char[] tArr = T.toCharArray();
