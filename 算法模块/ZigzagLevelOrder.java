@@ -7,6 +7,12 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* 二叉树的锯齿形层次遍历
+* @author Guozhu Zhu
+* @date 2018/10/23
+* @version 1.0
+*/
 class Solution {
     
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
