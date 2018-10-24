@@ -7,6 +7,13 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* 叶子相似的树
+* @author Guozhu Zhu
+* @date 2018/10/24
+* @version 1.0
+*
+*/
 class Solution {
     
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
