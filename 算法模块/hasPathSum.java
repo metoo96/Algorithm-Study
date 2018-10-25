@@ -7,6 +7,11 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+* @author Guozhu Zhu
+* @date 2018/10/25
+* @version 1.0
+*/
 class Solution {
     
     public boolean hasPathSum(TreeNode root, int sum) {
