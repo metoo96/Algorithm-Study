@@ -1,3 +1,9 @@
+/**
+* 排序数组中的数字k的次数
+* @author Guozhu Zhu
+* @date 2018/11/04
+* @version 1.0
+*/
 public class Solution {
     
     public int GetNumberOfK(int [] array , int k) {
