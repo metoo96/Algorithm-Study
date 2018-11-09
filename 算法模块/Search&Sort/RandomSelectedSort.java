@@ -1,7 +1,7 @@
 package com.zhuguozhu.util3;
 
 /**
- * 随机选择算法实现
+ * 随机选择算法实现  TopK问题解决方法
  * @author Guozhu Zhu
  * @date 2018/11/10
  * @version 1.0
