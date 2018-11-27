@@ -1,7 +1,7 @@
 package com.zhuguozhu.util3;
 
 /**
- * 随机选择算法实现
+ * 随机选择算法实现  TopK问题解决方法
  * @author Guozhu Zhu
  * @date 2018/11/10
  * @version 1.0
@@ -32,7 +32,7 @@ public class RandomSelected01 {
 	}
 	
 	public static int partition(int[] arr, int left, int right) {
-		int p = left;  //left ~ right随机数
+	        int p = Math.abs(new Random().nextInt() % (right-left+1) + left);  //left ~ right随机数
 		swap(arr, left, p);
 		int temp = arr[left];
 		while (left < right) {
