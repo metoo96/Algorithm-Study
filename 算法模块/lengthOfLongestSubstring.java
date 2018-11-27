@@ -12,12 +12,13 @@ import java.util.Set;
  */
 public class Demo02 {
 	
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		String str = "afjdlafjdlty";
 		int ans = lengthOfLongestSubstring(str);
 		System.out.println(ans);
-	}
-	
+    }
+
+    //滑动窗口机制	
     public static int lengthOfLongestSubstring(String s) {
         int n = s.length();
         Set<Character> set = new HashSet<>();
