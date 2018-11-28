@@ -53,10 +53,11 @@ void main() {
 	SSTable ST;
 	InitList_SSTable(ST);
 	Insert_SSTable(ST);
-	int testkey1=7,testkey2=200;
+	int testkey1 = 20;
+	int testkey2 = 200;
 	int result;
-	result=Search_Seq(ST, testkey1);
-	Show_End(result,testkey1);
-	result=Search_Seq(ST, testkey2);
-	Show_End(result,testkey2);
+	result = Search_Seq(ST, testkey1);
+	Show_End(result, testkey1);
+	result = Search_Seq(ST, testkey2);
+	Show_End(result, testkey2);
 }
