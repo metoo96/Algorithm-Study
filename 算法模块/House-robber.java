@@ -1,3 +1,9 @@
+/**
+*
+* @author Guozhu Zhu
+* @date 2018/12/02
+* @version 1.0
+*/
 class Solution {
     
     //暴力递归搜索解法
