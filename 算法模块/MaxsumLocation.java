@@ -17,6 +17,7 @@ public class Demo01 {
 		System.out.println(res);
 	}
 	
+	//DP算法实现
 	public static int solution(int[] array) {
 		int sum = array[0];
 		int max = array[0];
@@ -27,11 +28,11 @@ public class Demo01 {
 				sum = array[i]+sum;
 			} else {
 				sum = array[i];
-				curstart = i;
+				curstart = i;        //记录起始位置
 			}
 			if (sum > max) {
 				max = sum;
-				start = curstart;
+				start = curstart;    //更新起始位置
 				end = i;
 			} else {
 				max = max;
