@@ -1,10 +1,9 @@
 package p40;
 
 /**
- *
  * 最长公共子序列
  * @author Guozhu Zhu
- * @date 2018/9/17
+ * @date 2018/12/10
  * @version 1.0
  *
  */
