@@ -12,8 +12,8 @@ public class Demo01 {
 	/* =========== Test ========== */
 	public static void main(String[] args) {
 		int[][] arr = {{1, 2, 3},
-				       {4, 5, 6},
-				       {7, 8, 9}};
+			       {4, 5, 6},
+			       {7, 8, 9}};
 		boolean res01 = find01(5, arr);
 		boolean res02 = find02(5, arr);
 		boolean res03 = find03(5, arr);
