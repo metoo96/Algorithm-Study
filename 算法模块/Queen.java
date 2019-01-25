@@ -9,8 +9,9 @@ package p47;
  */
 public class Queen {
 	
-	public static int[][] arr = new int[8][8]; //棋盘
-	public static int map = 0; //存储方案数量
+	public static int[][] arr = new int[8][8];    //棋盘
+	
+	public static int map = 0;    //存储方案数量
 	
 	public static void main(String[] args) {
 		findQueen(0);
