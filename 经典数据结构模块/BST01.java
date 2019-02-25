@@ -1,296 +1,291 @@
-package com.zhuguozhu.util6;
+package p52;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
 /**
- * 二叉搜索树的实现
+ * BST数据结构的实现
  * @author Guozhu Zhu
  * @date 2019/2/25
  * @version 1.0
- * @param <E>
+ *
  */
-public class BST<E extends Comparable<E>>{
+public class BST01<E extends Comparable<E>> {
 	
 	private class Node {
-		public E e;
+		public E value;
 		public Node left;
 		public Node right;
-		public Node(E e) {
-			this.e = e;
+		public Node(E value) {
+			this.value = value;
 			this.left = null;
 			this.right = null;
 		}
 	}
-
-	private Node root;
 	
+	public Node root;
 	public int size;
-	
-	//BST的构造函数
-	public BST() {
+	public BST01() {
 		root = null;
 		size = 0;
 	}
-	
-	//BST树的元素个数
+    
 	public int getSize() {
 		return this.size;
 	}
 	
-	//BST树是否为空
 	public boolean isEmpty() {
 		return this.size == 0;
 	}
 	
-	//addNode
-	//添加一个元素
 	public void add(E e) {
 		root = add(root, e);
 	}
 	
-	//改进递归算法， 添加元素
-	private Node add(Node node, E e) {
+	public Node add(Node node, E e) {
 		if (node == null) {
 			size++;
 			return new Node(e);
 		}
-		if (e.compareTo(node.e) < 0) {
-			node.left = add(node.left, e);
-		} else if (e.compareTo(node.e) > 0) {
+		if (e.compareTo(node.value) > 0) {
 			node.right = add(node.right, e);
+		} else if (e.compareTo(node.value) < 0) {
+			node.left = add(node.left, e);
 		} else {
-			node.e = e;
+			node.value = e;
 		}
 		return node;
 	}
 	
-	//查询节点是否存在
-	public boolean contains(E e) {
-		return contains(root, e);
+	public Node getNode(Node node, E e) {
+		if (node == null) {
+			return null;
+		}
+		if (e.compareTo(node.value) > 0) {
+			return getNode(node.right, e);
+		} else if (e.compareTo(node.value) < 0) {
+			return getNode(node.left, e);
+		} else {
+			return node;
+		}
 	}
 	
-	private boolean contains(Node node, E e) {
+	public boolean contains(E e) {
+		Node node = getNode(root, e);
 		if (node == null) {
 			return false;
 		}
-		if (e.compareTo(node.e) == 0) {
-			return true;
-		} else if (e.compareTo(node.e) < 0) {
-			return contains(node.left, e);  //左子树
-		} else {
-			return contains(node.right, e); //右子树
-		}
+		return  true;
 	}
 	
-	//二叉树前序遍历， 递归版本
+	//前序遍历
 	public void preOrder() {
 		preOrder(root);
 	}
 	
-	private void preOrder(Node root) {
-		if (root == null) {
+	private void preOrder(Node node) {
+		if (node == null) {
 			return;
 		}
-		System.out.println(root.e);
-		preOrder(root.left);
-		preOrder(root.right);
+		System.out.println(node.value);
+		preOrder(node.left);
+		preOrder(node.right);
 	}
 	
-	//二叉树的中序遍历，递归版本
+	//中序遍历
 	public void inOrder() {
 		inOrder(root);
 	}
 	
-	private void inOrder(Node root) {
-		if (root == null) {
+	private void inOrder(Node node) {
+		if (node == null) {
 			return;
 		}
-		inOrder(root.left);
-		System.out.println(root.e);
-		inOrder(root.right);
+		inOrder(node.left);
+		System.out.println(node.value);
+		inOrder(node.right);
 	}
 	
-	//二叉树的后序遍历，递归版本
+	//后序遍历
 	public void postOrder() {
 		postOrder(root);
 	}
 	
-	public void postOrder(Node root) {
-		if (root == null) {
+	private void postOrder(Node node) {
+		if (node == null) {
 			return;
 		}
-		postOrder(root.left);
-		postOrder(root.right);
-		System.out.println(root.e);
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.println(node.value);
 	}
 	
-	//获取BST的最小值
-	public E minElement() {
-		if (size == 0) {
-			throw new IllegalArgumentException("error");
-		}
-		return minElement(root).e;
-	}
-	
-	public Node minElement(Node root) {
-		if (root.left == null) {
-			return root;
-		}
-		return minElement(root.left);
-	}
-	
-	//获取BST的最大值
-	public E maxElement() {
-		if (size == 0) {
-			throw new IllegalArgumentException("error");
-		}
-		return maxElement(root).e;
-	}
-	
-	public Node maxElement(Node root) {
-		if (root.right == null) {
-			return root;
-		}
-		return maxElement(root.right);
-	}
-	
-	//删除元素
-	public void removeElement(E e){
-	     removeElement(root, e);
-	}
-	
-	private Node removeElement(Node node,E e){     
-	    if (node == null)         
-	       return null;     
-	    if (e.compareTo(node.e) < 0) {
-	        node.left=removeElement(node.left,e);         
-	        return node;
-	     }     
-	   else if(e.compareTo(node.e)>0){
-	      node.right = removeElement(node.right,e);         
-	      return node;
-	   }     
-	   else{//要删除的是这个根节点
-	        //如果待删除的节点的左节点为空
-	       if(node.left==null){            
-	           Node rightNode = node.right;
-	           node.right=null;
-	           size--;            
-	           return rightNode;
-	        }        
-	       //待删除节点右节点为空
-	      else if(node.right==null){            
-	         Node leftNode = node.left;
-	         node.left=null;
-	         size--;            
-	         return leftNode;
-	      }        
-	      else{
-	    	//待删除节点左右节点不为空
-	        //找后驱节点作为跟节点
-	        Node nextRoot= minElement(node.right);
-	        nextRoot.right=removeMinElement(node.right);
-	        size++;//上面删除了节点的右边最小节点
-	        nextRoot.left=node.left;
-	        node.left=node.right=null;
-	        size--;//node节点删除，size--
-	        return nextRoot;
-	     }
-	  }
-	}
-	
-	//删除最小值
-	public E removeMinElement(){    
-	    E ret = minElement();
-	    root=removeMinElement(root);    
-	    return ret;
-	}
-	private Node removeMinElement(Node node){    
-	    if(node.left==null){       
-	       Node rightNode = node.right;//保存右节点
-	       node.right=null;
-	       size--;       
-	       return rightNode;
-	    }
-	    node.left = removeMinElement(node.left);    
-	    return node;
-	}
-
-	//删除最大值
-	public E removeMaxElement(){    
-	    E ret = maxElement();
-	    root=removeMaxElement(root);    
-	    return ret;
-	}
-	private Node removeMaxElement(Node node){    
-	    if(node.right==null){       
-	       Node leftNode = node.left;//保存左节点
-	       node.left=null;
-	       size--;       
-	      return leftNode;
-	   }
-	   node.right = removeMaxElement(node.right);    
-	   return node;
-	}
-	
-	public void levelOrder() {
-		levelOrder(root);
-	}
-	
-	private void levelOrder(Node root) {
-		Queue<Node> queue = new LinkedList<Node>();
-		queue.offer(root);
-		while (!queue.isEmpty()) {
-			Node curNode = queue.poll();
-			System.out.println(curNode.e);
-			if (curNode.left != null) {
-				queue.offer(curNode.left);
-			}
-			if (curNode.right != null) {
-				queue.offer(curNode.right);
-			}
-		}
-	}
-	
-	
-	//preOrder no-recursize
+	//非递归前序遍历
 	public void newPreOrder() {
-		newPreOrder(root);
-	}
-	
-	private void newPreOrder(Node node) {
 		Stack<Node> stack = new Stack<>();
-		stack.push(node);
-		Node temp = node;
+		Node temp = root;
 		while (temp != null || !stack.isEmpty()) {
 			while (temp != null) {
-				System.out.println(temp.e);
+				System.out.println(temp.value);
 				stack.push(temp);
 				temp = temp.left;
-			} 
+			}
 			if (!stack.isEmpty()) {
-				temp = stack.peek();
-				stack.pop();
+				temp = stack.pop();
 				temp = temp.right;
 			}
 		}
 	}
 	
-	/* ========== Test ========== */
-	public static void main(String[] args) {
-		BST<Integer> bst = new BST<>();
-		for (int i = 0; i < 10; i++) {
-			bst.add(i);
+	//非递归中序遍历
+	public void newInOrder() {
+		Stack<Node> stack = new Stack<>();
+		Node temp = root;
+		while (temp != null || !stack.isEmpty()) {
+			while (temp != null) {
+				stack.push(temp);
+				temp = temp.left;
+			}
+			if (!stack.isEmpty()) {
+				temp = stack.pop();
+				System.out.println(temp.value);
+				temp = temp.right;
+			}
 		}
-		bst.removeElement(2);
-		//bst.removeMinElement();
-		//bst.removeMaxElement();
-		//bst.inOrder();
-		//bst.preOrder();
-		//bst.levelOrder();
-		bst.newPreOrder();
+	}
+	
+	//利用队列来实现层次遍历
+	public void levelOrder() {
+	    Queue<Node> queue = new LinkedList<Node>();
+	    queue.offer(root);
+	    while (!queue.isEmpty()) {
+	    	Node curNode = queue.poll();
+	    	System.out.println(curNode.value);
+	    	if (curNode.left != null) {
+	    		queue.offer(curNode.left);
+	    	} 
+	    	if (curNode.right != null) {
+	    		queue.offer(curNode.right);
+	    	}
+	    }
+	}
+	
+	//二叉树的最小值
+	public E minElement() {
+	    return minElement(root).value;
+	}
+	
+	private Node minElement(Node node) {
+		if (node.left == null) {
+			return node;
+		}
+		return minElement(node.left);
+	}
+	
+	//二叉树的最大值
+	public E maxElement() {
+		return maxElement(root).value;
+	}
+	
+	private Node maxElement(Node node) {
+		if (node.right == null) {
+			return node;
+		}
+		return maxElement(node.right);
+	}
+	
+	//删除指定元素
+	public E removeElement(E e) {
+		Node node = getNode(root, e);
+		if (node == null) {
+			return null;
+		}
+		root = removeElement(root, e);
+		return node.value;
+	}
+	
+	public Node removeElement(Node node, E e) {
+		if (node == null) {
+			return null;
+		}
+		if (e.compareTo(node.value) > 0) {
+			node.right = removeElement(node.right, e);
+			return node;
+		} else if (e.compareTo(node.value) < 0) {
+			node.left = removeElement(node.left, e);
+			return node;
+		} else {
+			//删除该元素
+			if (node.left == null) {
+				Node rightNode = node.right;
+				node.right = null;
+				size--;
+				return rightNode;
+			} else if (node.right == null) {
+				Node leftNode = node.left;
+				node.left = null;
+				size--;
+				return leftNode;
+			} else {
+				Node successor = minElement(node.right);
+				successor.right = removeMinElement(node.right);
+				size++;
+				successor.left = node.left;
+				node.left = node.right = null;
+				return successor;
+			}
+		}
+	}
+	
+	public Node removeMinElement(Node node) {
+		if (node.left == null) {
+			Node rightNode = node.right;
+			node.right = null;
+			size--;
+			return rightNode;
+		}
+		node.left = removeMinElement(node.left);
+		return node;
+	}
+	
+	public Node removeMaxElement(Node node) {
+		if (node.right == null) {
+			Node leftNode = node.left;
+			node.left = null;
+			size--;
+			return leftNode;
+		}
+		node.right = removeMaxElement(node.right);
+		return node;
+	}
+	
+	/* ========== Test ========== 
+	 * 测试的BST:
+	 *             0
+	 *              \
+	 *               1 
+	 *                \
+	 *                 5
+	 *                /
+	 *               3
+	 *              / \
+	 *             2   4
+	 */
+	public static void main(String[] args) {
+		BST01<Integer> bst = new BST01<>();
+		bst.add(0);
+		bst.add(1);
+		bst.add(5);
+		bst.add(3);
+		bst.add(2);
+		bst.add(4);
+		//bst.inOrder();      //0, 1, 2, 3, 4, 5
+		//bst.preOrder();     //0, 1, 5, 3, 2, 4
+		//bst.postOrder();    //2, 4, 3, 5, 1, 0
+		//bst.levelOrder();   //0, 1, 5, 3, 2, 4
+		//bst.newPreOrder();
+		//bst.newInOrder();
 	}
 	
 }
