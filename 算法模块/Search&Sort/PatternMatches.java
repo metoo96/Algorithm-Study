@@ -57,7 +57,7 @@ public class Test06 {
 					next[j] = next[k];
 				}
 			} else {
-				k = next[j];
+				k = next[k];
 			}
 		}
 		return next;
